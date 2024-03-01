@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Task 2</title>
+  </head>
+  <body>
+    <pre>
+        Завдання:
+        Напишіть сценарій, який буде запитувати користувача значення, доки той не введе значення stop
+        Усі введені значення, якщо вони є числом, мають бути додані до масиву.
+        Після того, як користувач ввів значення стоп, порахуйте суму всіх значень, які знаходяться в масиві.
+    </pre>
+    <script>
+      let numbers = [];
+
+      while (true) {
+        let input = prompt('Enter a number. For exit type "stop"');
+
+        if (input == 'stop') {
+          break;
+        }
+        let number = Number(input);
+        if (!isNaN(number)) {
+          numbers.push(number);
+        }
+      }
+
+      let sum = 0;
+      numbers.forEach((number) => {
+        sum += number;
+      });
+
+      // for (const num of numbers) {
+      //     sum += num;
+      // }
+
+      alert(`The sum is ${sum}`);
+    </script>
+  </body>
+</html>
