@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Task 2</title>
+  </head>
+  <body>
+    <pre>
+        Завдання:
+        Створіть функцію avg(a, b, c), яка повертає середнє арифметичне для чисел a, b, c
+        Якщо параметр відсутній, не використовуйте значення для розрахунку середнього арифметичного значення.
+
+        
+    </pre>
+    <script>
+      function findAverage(a, b, c) {
+        let sum = 0;
+        let count = 0;
+
+        if (a) {
+          sum += a;
+          count++;
+        }
+        if (b) {
+          sum += b;
+          count++;
+        }
+        if (c) {
+          sum += c;
+          count++;
+        }
+        return sum / count;
+      }
+      console.log(findAverage(2, 4, 6));
+      console.log(findAverage(2, 4));
+      console.log(findAverage(2));
+    </script>
+  </body>
+</html>

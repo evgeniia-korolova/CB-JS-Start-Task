@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Task 5</title>
+  </head>
+  <body>
+    <pre>
+        Завдання:
+        Створіть функцію, яка приймає масив значень та повертає масив з значеннями, що дублюються, або null якщо
+        повторюваних значень у масиві немає.
+    </pre>
+    <script>
+      let arr1 = [2, 4, 6, 8, 2, 4, 6, 7, 8, 9, 7, 5, 3];
+      let arr2 = [1, 2, 3, 4, 5, 6];
+      let arr3 = [1, 2, 3, 4, 5, 5, 5, 4, 3, 2, 1];
+
+      function checkDoubleNumbers(arr) {
+        let result = [];
+        for (let i = 0; i < arr.length; i++) {
+          let currentElem = arr[i];
+          for (let j = i + 1; j < arr.length; j++) {
+            if (currentElem === arr[j]) {
+              if (result.indexOf(currentElem) == -1) result.push(currentElem);
+              break;
+            }
+          }
+        }
+        return result.length != 0 ? result : null;
+      }
+
+      console.log(checkDoubleNumbers(arr1));
+      console.log(checkDoubleNumbers(arr2));
+      console.log(checkDoubleNumbers(arr3));
+    </script>
+  </body>
+</html>
