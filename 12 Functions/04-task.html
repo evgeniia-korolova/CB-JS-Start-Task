@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Task 4</title>
+  </head>
+
+  <body>
+    <pre>
+        Завдання:
+        Перепишіть код за допомогою функції filter і forEach з ES5.
+    </pre>
+    <script>
+      let values = [10, 20, 5, 7, 11, 8, 125, 4, 8, 3, 23];
+      let oddValues = values.filter((elem) => elem % 2 !== 0);
+      let evenValues = values.filter((elem) => elem % 2 === 0);
+      console.log(oddValues);
+      console.log(evenValues);
+
+      console.log('Odd values');
+      oddValues.forEach((elem) => {
+        console.log(elem);
+      });
+
+      console.log('Even values');
+      evenValues.forEach((elem) => {
+        console.log(elem);
+      });
+    </script>
+  </body>
+</html>
